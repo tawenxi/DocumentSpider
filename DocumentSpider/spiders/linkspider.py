@@ -6,7 +6,7 @@ class LinkspiderSpider(scrapy.Spider):
 	name = 'linkspider'
 	allowed_domains = ['http://10.177.9.37:81/suichuan']
 	start_urls = ['http://http://10.177.9.37:81/suichuan/']
-	cookies = '6D72FDC66E803B76762E660890D8CA19'
+	cookies = '1B77222A2706B0FC881E0C8CF1870F89'
 	conn = None
 	cursor = None
 
@@ -21,7 +21,7 @@ class LinkspiderSpider(scrapy.Spider):
 		self.cursor = self.conn.cursor()
 
 		try:
-			row_count = self.cursor.execute("select docid,biaoti from documents WHERE `chengbanren` = '无' limit 5000;")
+			row_count = self.cursor.execute("select docid,biaoti from documents WHERE `chengbanren` = '无' limit 3000;")
 			print("SQL 语句查询的行数%d" % row_count)
 			
 			for line in self.cursor.fetchall():

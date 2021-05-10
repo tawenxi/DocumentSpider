@@ -45,7 +45,7 @@ class DocumentspiderPipeline(object):
             self.cursor = self.conn.cursor()
             try:
                 # 插入数据
-                self.cursor.execute('INSERT INTO scrapy_document (bianhao,shijian,danwei,wenhao,biaoti,zhuangtai,leixing,docid,chengbanren) VALUES("{}", "{}","{}", "{}","{}", "{}","{}", "{}","{}")'.format(item['bianhao'], item['shijian'],item['danwei'], item['wenhao'],item['biaoti'], item['zhuangtai'],item['leixing'], item['docid'],'无'))
+                self.cursor.execute('INSERT INTO documents (bianhao,shijian,danwei,wenhao,biaoti,zhuangtai,leixing,docid,chengbanren) VALUES("{}", "{}","{}", "{}","{}", "{}","{}", "{}","{}")'.format(item['bianhao'], item['shijian'],item['danwei'], item['wenhao'],item['biaoti'], item['zhuangtai'],item['leixing'], item['docid'],'无'))
                 print(f"数据<{item['docid']}>数据提交中...")
                 # 数据提交到数据库
                 self.conn.commit()
