@@ -6,7 +6,7 @@ class LinkspiderSpider(scrapy.Spider):
 	name = 'linkspider'
 	allowed_domains = ['http://10.177.9.37:81/suichuan']
 	start_urls = ['http://http://10.177.9.37:81/suichuan/']
-	cookies = '1B77222A2706B0FC881E0C8CF1870F89'
+	cookies = input("cookie:")
 	conn = None
 	cursor = None
 

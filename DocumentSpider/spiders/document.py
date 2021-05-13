@@ -8,8 +8,8 @@ class DocumentSpider(scrapy.Spider):
 	name = 'document'
 	allowed_domains = ['http://10.177.9.37:81/suichuan']
 	start_urls = ['http://http://10.177.9.37:81/suichuan/']
-
-	cookies = 'A176B64962F4CF815E96F497036EF11F'
+	cookies = input("cookie:")
+	
 
 	def start_requests(self):
 		try:
